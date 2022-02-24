@@ -1,0 +1,39 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+export PATH="$PATH:$GOBIN"
+
+# Path to your oh-my-zsh installation.
+export ZSH="/home/aadi/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+ZSH_THEME="bullet-train"
+
+plugins=(
+git
+zsh-autosuggestions
+zsh-syntax-highlighting
+)
+
+export TERM=xterm-256color
+
+source $ZSH/oh-my-zsh.sh
+
+alias modz="vim ~/.zshrc"
+alias srcz="source ~/.zshrc"
+
+alias ls="lsd -la"
+alias pac="sudo pacman -Sy"
+alias update="sudo pacman -Syu"
+alias rpac="sudo pacman -R"
+alias pfind="sudo pacman -Q | grep"
+alias aurlist="pacman -Qm"
+
+alias big="figlet"
+
+alias y="yay -Sy"
+alias aur="yay -Ss"
+
+alias rm="rm -rf"
+alias wh="whereis"
+

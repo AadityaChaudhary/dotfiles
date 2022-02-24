@@ -1,0 +1,48 @@
+set nocompatible
+
+call plug#begin()
+
+Plug 'fatih/vim-go', { 'tag': '*' }
+
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+Plug 'joshdick/onedark.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+Plug 'dracula/vim', { 'as': 'dracula' }
+
+call plug#end()
+
+set number relativenumber
+
+nnoremap <C-g> :NERDTreeToggle<Cr>
+nnoremap . zfa}
+nnoremap <C-.> zo
+nnoremap <C-n> :tabnext<Cr>
+nnoremap <C-k> :tabnew<Cr>
+nnoremap <C-b> :below:term ++close<Cr><C-w>N:resize 15<cr>i
+au filetype go nnoremap ; :GoDef<cr>
+
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+inoremap <C-g> :NERDTreeToggle<Cr>
+au filetype go inoremap <C-;> <C-x><C-o>
+
+
+
+
+set tabstop=4
+set shiftwidth=4
+set showcmd
+
+syntax on
+colorscheme dracula
+let g:airline_theme='onedark'
+let g:airline_powerline_fonts = 1
