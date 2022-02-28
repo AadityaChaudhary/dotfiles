@@ -1,1 +1,3 @@
-sudo pacman -S git vim vi curl
+sudo $INSTALL git vim vi curl
+  git config --global user.email $EMAIL
+  git config --global user.name $NAME
